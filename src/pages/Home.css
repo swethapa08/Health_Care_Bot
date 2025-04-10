@@ -1,33 +1,32 @@
 .home-section {
-    position: relative;
-    width: 100vw;
-    height: 100vh; 
-    background-image: url("../assets/image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden;
-  }
-  
-  .home-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 10px;
-  }
-  
-  .home-overlay h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .home-overlay p {
-    font-size: 18px;
-  }
-  
- 
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* full height minus navbar */
+  background-image: url("../assets/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.home-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.home-overlay h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.home-overlay p {
+  font-size: 18px;
+}
+

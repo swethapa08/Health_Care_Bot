@@ -5,7 +5,6 @@ const Admin = () => (
   <section className="admin-section">
     <h2>Admin Dashboard</h2>
     <p>Manage diagnostics, users, and system status.</p>
-    {/* Add admin controls here */}
   </section>
 );
 
