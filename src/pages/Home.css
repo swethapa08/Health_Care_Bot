@@ -1,7 +1,7 @@
 .home-section {
   position: relative;
   width: 100vw;
-  height: 100vh; /* full height minus navbar */
+  height: 100vh;
   background-image: url("../assets/image.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,8 +19,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   border-radius: 10px;
+  max-width: 90%;
 }
 
+/* Typography */
 .home-overlay h2 {
   font-size: 36px;
   margin-bottom: 10px;
@@ -30,3 +32,25 @@
   font-size: 18px;
 }
 
+/* Responsive Fix for Mobile & Nav Space */
+@media screen and (max-width: 768px) {
+  .home-section {
+    padding-top: 100px; /* Adjust based on your fixed navbar height */
+    align-items: flex-start;
+  }
+
+  .home-overlay {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .home-overlay h2 {
+    font-size: 24px;
+  }
+
+  .home-overlay p {
+    font-size: 14px;
+  }
+}
