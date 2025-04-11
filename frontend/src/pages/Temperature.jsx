@@ -28,7 +28,7 @@ const Temperature = () => {
               />
             </label>
           </div>
-          <button type="submit">Proceed</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>

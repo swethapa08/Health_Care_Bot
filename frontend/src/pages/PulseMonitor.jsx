@@ -10,8 +10,8 @@ const PulseMonitor = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Pulse data:", { spo2, respiration });
-    setSubmitted(true);
 
+    // Redirect to Blood Glucose page
     navigate("/blood-glucose");
   };
 
@@ -31,7 +31,6 @@ const PulseMonitor = () => {
               />
             </label>
           </div>
-          <br />
           <div className="input-group">
             <label>
               Respiration:
@@ -43,14 +42,11 @@ const PulseMonitor = () => {
               />
             </label>
           </div>
-          <br />
-          <button type="submit">Submit</button>
+          <button type="submit">Proceed</button>
         </form>
-        {submitted && <p className="success-message">Pulse data submitted successfully!</p>}
-        <button type="submit">Proceed</button>
-      </div >
-    </div >
-  )
+      </div>
+    </div>
+  );
 };
 
 export default PulseMonitor;

@@ -8,6 +8,7 @@ const SmokingHabits = () => {
     e.preventDefault();
     console.log("Smoking habit:", smoking);
     alert(`Smoking Habit Submitted: ${smoking}`);
+    // You can add navigation here if needed next
   };
 
   return (

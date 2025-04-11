@@ -10,6 +10,7 @@ const BloodGlucose = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Blood Glucose Data:", { fasting, random });
+    // Redirect to Temperature page
     navigate("/temperature");
   };
 

@@ -46,7 +46,6 @@
   color: #2563eb;
 }
 
-/* --- Mobile Styles --- */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;

@@ -43,7 +43,7 @@ const BPMonitor = () => {
             </label>
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Proceed</button>
         </form>
       </div>
     </div>
