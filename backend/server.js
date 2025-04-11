@@ -6,6 +6,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import patientRoutes from './routes/patientRoutes.js';
 import doctorRoutes  from "./routes/doctorRoutes.js";
+import predictRoutes  from "./routes/predictRoutes.js";
 import otpRoutes from "./routes/otpRoutes.js"
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(cookieParser());
 
 app.use("/patient", patientRoutes);
 app.use("/doctor", doctorRoutes);
+app.use("/disease", predictRoutes);
 app.use("/otp", otpRoutes);
 
 app.use(errorHandler);

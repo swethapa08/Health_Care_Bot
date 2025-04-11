@@ -10,9 +10,9 @@ dotenv.config();
 // @route POST /doctor/register
 // @access public
 const registerDoctor = asyncHandler(async (req, res) => {
-    const { name, phone, email, password, age, department } = req.body;
+    const { name, gender, phone, email, password, age, department } = req.body;
 
-    if (!name || !email || !password || !phone || !age || !department) {
+    if (!name || !gender || !email || !password || !phone || !age || !department) {
         res.status(400);
         throw new Error("All mandatory fields are required");
     }
@@ -34,6 +34,7 @@ const registerDoctor = asyncHandler(async (req, res) => {
     // When you write doctorname and email directly inside the object, it's using object property shorthand, assumes the key and the value are the same.
     const doctor = await Doctor.create({
         name,
+        gender,
         phone,
         email,
         password: hashedPassword,
@@ -64,6 +65,7 @@ const loginDoctor = asyncHandler(async (req, res) => {
             user: {
                 id: doctor.id,
                 name: doctor.name,
+                gender: doctor.gender,
                 phone: doctor.phone,
                 email: doctor.email,
                 age: doctor.age,

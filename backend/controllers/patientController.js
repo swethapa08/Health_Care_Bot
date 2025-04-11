@@ -10,9 +10,9 @@ dotenv.config();
 // @route POST /patient/register
 // @access public
 const registerPatient = asyncHandler(async (req, res) => {
-    const { name, phone, email, password, age, height, weight, bloodGroup, history } = req.body;
+    const { name, gender, phone, email, password, age, height, weight, bloodGroup, history } = req.body;
 
-    if (!name || !email || !password || !phone || !age || !height || !weight || !bloodGroup) {
+    if (!name || !email || !password || !phone || !age || !height || !weight || !bloodGroup || !gender) {
         res.status(400);
         throw new Error("All mandatory fields are required");
     }
@@ -34,6 +34,7 @@ const registerPatient = asyncHandler(async (req, res) => {
     // When you write patientname and email directly inside the object, it's using object property shorthand, assumes the key and the value are the same.
     const patient = await Patient.create({
         name,
+        gender,
         phone,
         email,
         password: hashedPassword,
@@ -56,7 +57,7 @@ const registerPatient = asyncHandler(async (req, res) => {
 // @route POST /patient/login
 // @access public
 const loginPatient = asyncHandler(async (req, res) => {
-    const { email, phone, password } = req.body;
+    const { email, password } = req.body;
     if (!email || !password) {
         res.status(400);
         throw new Error("All fields are required");
@@ -67,6 +68,7 @@ const loginPatient = asyncHandler(async (req, res) => {
             user: {
                 id: patient.id,
                 name: patient.name,
+                gender: patient.gender,
                 phone: patient.phone,
                 email: patient.email,
                 age: patient.age,
@@ -77,7 +79,7 @@ const loginPatient = asyncHandler(async (req, res) => {
         },
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: "12h" });
-        
+
         res.status(200).cookie('accessToken', accessToken, {
             httpOnly: true,
             sameSite: process.env.COOKIE_SAME_SITE,
@@ -112,7 +114,7 @@ const logoutPatient = asyncHandler(async (req, res) => {
 // @access private
 const changePassPatient = asyncHandler(async (req, res) => {
     const { curPass, newPass } = req.body;
-    
+
     const patient = await Patient.findById(req.user.id).select("password");
     const curPassValid = await bcrypt.compare(curPass, patient.password);
 
@@ -154,7 +156,7 @@ const getPatientById = asyncHandler(async (req, res) => {
         throw new Error("patient not found");
     }
 
-    res.json({ name: patient.name, email: patient.email, phone: patient.phone, id: patient.id }).status(200);
+    res.json(patient).status(200);
 });
 
 export { registerPatient, loginPatient, currentPatient, logoutPatient, getPatientById, changePassPatient, changePassOtpVerifiedPatient }
