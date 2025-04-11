@@ -5,6 +5,10 @@ const patientSchema = mongoose.Schema({
         type: String,
         required: [true, "Please provide your name"]
     },
+    gender: {
+        type: String,
+        required: [true, "Please provide your gender"]
+    },
     phone: {
         type: Number,
         required: [true, "Please provide an phone"],
