@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import "./BPMonitor.css";
+=======
+import "./Checkup.css";
+>>>>>>> Stashed changes
+=======
+import "./Checkup.css";
+>>>>>>> Stashed changes
 
 const BPMonitor = () => {
   const [systolic, setSystolic] = useState("");
@@ -9,15 +17,27 @@ const BPMonitor = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
     // You can send systolic/diastolic to backend here if needed
     console.log("Systolic:", systolic);
     console.log("Diastolic:", diastolic);
 
+=======
+    console.log("Systolic:", systolic);
+    console.log("Diastolic:", diastolic);
+>>>>>>> Stashed changes
+=======
+    console.log("Systolic:", systolic);
+    console.log("Diastolic:", diastolic);
+>>>>>>> Stashed changes
     navigate("/pulse-monitor");
   };
 
   return (
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <div className="p-6 max-w-xl mx-auto bg-white rounded-lg shadow-md mt-6">
       <h1 className="text-2xl font-bold mb-6 text-center text-blue-700">Blood Pressure Monitor</h1>
       <form onSubmit={handleSubmit}>
@@ -56,6 +76,44 @@ const BPMonitor = () => {
           Submit
         </button>
       </form>
+=======
+=======
+>>>>>>> Stashed changes
+    <div className="bp-monitor-wrapper">
+      <div className="checkup-form">
+        <h3>Blood Pressure Monitor</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label>
+              Systolic Pressure (mmHg):
+              <input
+                type="number"
+                value={systolic}
+                onChange={(e) => setSystolic(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+
+          <div className="input-group">
+            <label>
+              Diastolic Pressure (mmHg):
+              <input
+                type="number"
+                value={diastolic}
+                onChange={(e) => setDiastolic(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+
+          <button type="submit">Proceed</button>
+        </form>
+      </div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     </div>
   );
 };
