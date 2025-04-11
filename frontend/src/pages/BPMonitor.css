@@ -50,3 +50,15 @@
 .bp-button:hover {
   background-color: #1d4ed8;
 }
+
+.robot-animation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.robot-frame {
+  width: 120px;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
