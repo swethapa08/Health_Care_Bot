@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Checkup.css";
 
 const SmokingHabits = () => {
   const [smoking, setSmoking] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Smoking habit:", smoking);
-    alert(`Smoking Habit Submitted: ${smoking}`);
-    // You can add navigation here if needed next
+    navigate("/cp-key"); 
   };
 
   return (
@@ -18,7 +19,7 @@ const SmokingHabits = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label>Do you smoke?</label>
-            <div><br></br>
+            <div><br />
               <label>
                 <input
                   type="radio"
@@ -40,7 +41,7 @@ const SmokingHabits = () => {
               </label>
             </div>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit">Proceed</button>
         </form>
       </div>
     </div>
