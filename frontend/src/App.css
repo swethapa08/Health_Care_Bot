@@ -10,3 +10,8 @@ body {
 .main-content {
   padding-top: 80px;
 }
+
+* {
+  font-weight: bold !important;
+}
+

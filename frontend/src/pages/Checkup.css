@@ -89,10 +89,9 @@
   color: #10b981;
 }
 
-/* Mobile responsive tweaks */
 @media screen and (max-width: 768px) {
   .checkup-section {
-    padding: 100px 15px 30px 15px; /* Leaves room for fixed nav + bottom padding */
+    padding: 100px 15px 30px 15px; 
   }
 
   .general-grid {

@@ -7,7 +7,7 @@ const Checkup = () => {
 
   return (
     <section className="checkup-section">
-      <h2>General and Symptom-Based Checkup</h2>
+      <h1 style={{fontWeight:700}}>General and Symptom-Based Checkup</h1>
       <p>Select checkup mode:</p>
       <div className="checkup-buttons">
         <button className="general-btn" onClick={() => navigate("/general-checkup")}>

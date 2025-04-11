@@ -23,7 +23,6 @@
   max-width: 90%;
 }
 
-/* Typography */
 .home-overlay h2 {
   font-size: 36px;
   margin-bottom: 10px;
@@ -33,7 +32,6 @@
   font-size: 18px;
 }
 
-/* Responsive Fix for Mobile & Nav Space */
 @media screen and (max-width: 768px) {
   .home-section {
     padding-top: 100px; /* Adjust based on your fixed navbar height */

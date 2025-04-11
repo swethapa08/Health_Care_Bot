@@ -1,3 +1,4 @@
+/* General Navbar Styling */
 .navbar {
   position: fixed;
   top: 0;
@@ -12,20 +13,26 @@
   padding: 0 20px;
   height: 80px;
   box-sizing: border-box;
+  overflow: hidden; /* prevent scroll */
 }
 
+/* Logo Container */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 12px;
+  height: 100%;
 }
 
+/* Logo Image */
 .logo {
-  height: 57px;
-  width: 57px;
-  padding: 20px;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  padding: 10px 0;
 }
 
+/* Navigation Links */
 .nav-links {
   display: flex;
   gap: 16px;
@@ -46,6 +53,7 @@
   color: #2563eb;
 }
 
+/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -74,7 +82,8 @@
 
   .logo {
     height: 40px;
-    width: 40px;
+    width: auto;
+    object-fit: contain;
     padding: 0;
   }
 }
