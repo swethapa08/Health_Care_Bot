@@ -8,6 +8,7 @@ import Consultation from "./pages/Consultation";
 import Admin from "./pages/Admin";
 import BPMonitor from "./pages/BPMonitor"; 
 import PulseMonitor from "./pages/PulseMonitor";
+import VoiceRecorder from "./pages/symptomModule/VoiceRecorder";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="/general-checkup" element={<BPMonitor />} />
           <Route path="/bp-monitor" element={<BPMonitor />} />
           <Route path="/pulse-monitor" element={<PulseMonitor />} />
+          <Route path="/sk-test" element={<VoiceRecorder />} />
+
         </Routes>
       </div>
     </Router>
