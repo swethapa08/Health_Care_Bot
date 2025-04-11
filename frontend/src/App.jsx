@@ -8,6 +8,9 @@ import Consultation from "./pages/Consultation";
 import Admin from "./pages/Admin";
 import BPMonitor from "./pages/BPMonitor"; 
 import PulseMonitor from "./pages/PulseMonitor";
+import BloodGlucose from "./pages/BloodGlucose";
+import Temperature from "./pages/Temperature";
+import SmokingHabits from "./pages/SmokingHabits";
 import VoiceRecorder from "./pages/symptomModule/VoiceRecorder";
 
 const App = () => {
@@ -24,7 +27,10 @@ const App = () => {
           <Route path="/general-checkup" element={<BPMonitor />} />
           <Route path="/bp-monitor" element={<BPMonitor />} />
           <Route path="/pulse-monitor" element={<PulseMonitor />} />
-          <Route path="/sk-test" element={<VoiceRecorder />} />
+          <Route path="/blood-glucose" element={<BloodGlucose />} />
+          <Route path="/temperature" element={<Temperature />} />
+          <Route path="/smoking-habits" element={<SmokingHabits />} />
+          <Route path="/test" element={<VoiceRecorder />} />
 
         </Routes>
       </div>

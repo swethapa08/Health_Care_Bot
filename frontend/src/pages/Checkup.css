@@ -182,15 +182,9 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   min-height: calc(100vh - 100px); /* Adjust depending on your Navbar height */
-=======
-  min-height: calc(100vh - 100px); 
->>>>>>> Stashed changes
-=======
-  min-height: calc(100vh - 100px); 
->>>>>>> Stashed changes
+  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   padding-top: 80px;
   padding-bottom: 20px;
   background-color: #f5f5f5;

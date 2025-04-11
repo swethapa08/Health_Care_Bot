@@ -1,14 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-import "./Checkup.css"; 
-const PulseMonitor = () => {
-  const [spo2, setSpo2] = useState("");
-  const [respiration, setRespiration] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-=======
-=======
->>>>>>> Stashed changes
 import { useNavigate } from "react-router-dom";
 import "./Checkup.css";
 
@@ -16,27 +6,13 @@ const PulseMonitor = () => {
   const [spo2, setSpo2] = useState("");
   const [respiration, setRespiration] = useState("");
   const navigate = useNavigate();
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Pulse data:", { spo2, respiration });
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     setSubmitted(true);
-=======
 
-   
     navigate("/blood-glucose");
->>>>>>> Stashed changes
-=======
-
-   
-    navigate("/blood-glucose");
->>>>>>> Stashed changes
   };
 
   return (
@@ -55,13 +31,7 @@ const PulseMonitor = () => {
               />
             </label>
           </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
           <br />
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
           <div className="input-group">
             <label>
               Respiration:
@@ -73,23 +43,14 @@ const PulseMonitor = () => {
               />
             </label>
           </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
           <br />
           <button type="submit">Submit</button>
         </form>
         {submitted && <p className="success-message">Pulse data submitted successfully!</p>}
-=======
-          <button type="submit">Proceed</button>
-        </form>
->>>>>>> Stashed changes
-=======
-          <button type="submit">Proceed</button>
-        </form>
->>>>>>> Stashed changes
-      </div>
-    </div>
-  );
+        <button type="submit">Proceed</button>
+      </div >
+    </div >
+  )
 };
 
 export default PulseMonitor;
